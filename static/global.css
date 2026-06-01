@@ -103,6 +103,11 @@ main.index img.avatar {
     height: 8rem;
 }
 
+a, a:visited {
+    color: var(--color-atom-blue);
+    text-decoration-color: var(--color-atom-blue);
+}
+
 a.styled-button {
     display: contents;
 }
