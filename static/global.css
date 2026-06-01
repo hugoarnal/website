@@ -4,8 +4,12 @@
     --color-atom-gray: #282c34;
     --color-atom-light-gray: #abb2bf;
     --color-atom-blue: #4082dd;
+    --color-atom-red: #be5046;
+    --color-atom-green: #739e61;
     --color-atom-orange: #ff6347;
     --color-atom-yellow: #c6a753;
+
+    --animation-duration: .3s;
 }
 
 /* Force JetBrains Mono */
@@ -87,4 +91,29 @@ button.styled-button {
     cursor: pointer;
     font-size: 15px;
     font-weight: 600;
+}
+
+.hover-bg-white:hover {
+    transition-duration: var(--animation-duration);
+
+    background-color: white;
+    color: black;
+}
+
+.hover-bg-green:hover {
+    transition-duration: var(--animation-duration);
+
+    background-color: var(--color-atom-green);
+}
+
+.hover-bg-blue:hover {
+    transition-duration: var(--animation-duration);
+
+    background-color: var(--color-atom-blue);
+}
+
+.hover-bg-black:hover {
+    transition-duration: var(--animation-duration);
+
+    background-color: black;
 }
