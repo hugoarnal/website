@@ -10,6 +10,8 @@
     --color-atom-yellow: #c6a753;
 
     --animation-duration: .3s;
+
+    --header-height: 3rem;
 }
 
 /* Force JetBrains Mono */
@@ -58,16 +60,42 @@ main.index .index-boxes {
     gap: .50rem;
 }
 
+header {
+    max-width: 100%;
+    height: var(--header-height);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1rem;
+
+    gap: .5rem;
+}
+
 span.epitech {
     color: var(--color-atom-blue);
 }
 
-img.avatar {
-    width: 8rem;
-    height: 8rem;
+.gray-divider {
+    min-height: 100%;
 
+    border: 1px solid var(--color-atom-light-gray);
+}
+
+img.avatar {
     border-radius: 1rem;
     filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.25));
+}
+
+header img.avatar {
+    height: var(--header-height);
+    border-radius: .5rem;
+}
+
+main.index img.avatar {
+    width: 8rem;
+    height: 8rem;
 }
 
 a.styled-button {

@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hugo ARNAL</title>
+    <title>
+        {% block title %}
+            Hugo ARNAL
+        {% endblock title %}
+    </title>
     <link rel="stylesheet" href="/global.css">
     <meta property="og:title" content="Hugo ARNAL" />
     <meta property="og:type" content="website" />
@@ -13,6 +17,30 @@
 </head>
 
 <body>
+    {% block header %}
+    <header>
+        <img class="avatar" src="cat.png" alt="My avatar, a cat picture" />
+
+        <div class="gray-divider"></div>
+
+        <a class="styled-button" href="/">
+            <button class="styled-button hover-bg-white">
+                Home
+            </button>
+        </a>
+        <a class="styled-button" href="/blog">
+            <button class="styled-button hover-bg-white">
+                Blog
+            </button>
+        </a>
+        <a class="styled-button" href="/projects">
+            <button class="styled-button hover-bg-white">
+                Projects
+            </button>
+        </a>
+    </header>
+    {% endblock header %}
+
     {% block content %}
     {% endblock content %}
 </body>
