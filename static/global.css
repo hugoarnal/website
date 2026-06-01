@@ -60,6 +60,11 @@ main.index .index-boxes {
     gap: .50rem;
 }
 
+main.content {
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
 header {
     max-width: 100%;
     height: var(--header-height);
