@@ -48,6 +48,12 @@ main.index {
     gap: 2rem;
 }
 
+main.index .index-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: .50rem;
+}
+
 span.epitech {
     color: var(--color-atom-blue);
 }
@@ -58,4 +64,27 @@ img.avatar {
 
     border-radius: 1rem;
     filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.25));
+}
+
+a.styled-button {
+    display: contents;
+}
+
+button.styled-button {
+    padding: 0;
+    border: 0;
+    background-color: #0000;
+    color: white;
+
+    padding-top: .10rem;
+    padding-bottom: .10rem;
+    padding-left: .50rem;
+    padding-right: .50rem;
+
+    border: .075rem solid #ffffff;
+    border-radius: .50rem;
+
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
 }

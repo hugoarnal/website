@@ -3,9 +3,40 @@
 {% block content %}
 <main class="index center-horizon center-vertical">
     <img class="avatar" src="cat.png" alt="My avatar, a cat picture" />
-    <div>
-        <h1>Hugo ARNAL</h1>
-        <h4>Assistant & Student at <span class="epitech">Epitech</span></h4>
+    <div class="index-boxes">
+        <div>
+            <h1>Hugo ARNAL</h1>
+            <span>Assistant & Student at <span class="epitech">Epitech</span></span>
+        </div>
+        <div class="index-buttons">
+            <a class="styled-button" href="/blog">
+                <button class="styled-button">
+                    Blog
+                </button>
+            </a>
+            <a class="styled-button" href="/projects">
+                <button class="styled-button">
+                    Projects
+                </button>
+            </a>
+        </div>
+        <div class="index-buttons">
+            <a class="styled-button" href="mailto:hugo@hugoarnal.com">
+                <button class="styled-button">
+                    Email
+                </button>
+            </a>
+            <a class="styled-button" href="https://linkedin.com/in/hugo-arnal-0x" target="_blank">
+                <button class="styled-button">
+                    LinkedIn
+                </button>
+            </a>
+            <a class="styled-button" href="https://github.com/hugoarnal" target="_blank">
+                <button class="styled-button">
+                    GitHub
+                </button>
+            </a>
+        </div>
     </div>
 </main>
 {% endblock content %}
