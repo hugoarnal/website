@@ -39,19 +39,20 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
 }
 
-.center-horizon {
-    display: flex;
-    justify-content: center;
-}
-
-.center-vertical {
+main.index {
     display: flex;
     align-items: center;
-}
+    justify-content: center;
 
-main.index {
     min-height: 100%;
     gap: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+    main.index {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 main.index .index-boxes {
@@ -63,6 +64,13 @@ main.index .index-boxes {
 main.content {
     padding-left: 5rem;
     padding-right: 5rem;
+}
+
+@media only screen and (max-width: 768px) {
+    main.content {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 }
 
 header {
