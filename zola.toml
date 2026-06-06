@@ -10,7 +10,8 @@ build_search_index = false
 [markdown]
 
 [markdown.highlighting]
-theme = "catppuccin-mocha"
+dark_theme = "one-dark-pro"
+light_theme = "catppuccin-latte"
 
 [extra]
 # Put all your custom variables here
