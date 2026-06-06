@@ -120,6 +120,11 @@ a.styled-button {
     display: contents;
 }
 
+.not-found-home-button {
+    display: flex;
+    justify-content: center;
+}
+
 button.styled-button {
     padding: 0;
     border: 0;
