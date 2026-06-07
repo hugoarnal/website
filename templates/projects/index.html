@@ -23,11 +23,17 @@
                         {% endfor %}
                     </div>
                 </div>
+
                 {% if page.extra.preview_description %}
                     <p class="project-description">
                         {{ page.extra.preview_description }}
                     </p>
                 {% endif %}
+
+                {% if page.extra.preview_image %}
+                    <img class="project-image" src="{{ page.extra.preview_image }}"/>
+                {% endif %}
+
                 <div class="project-container">
                     {% if page.extra.git_repo %}
                         <a class="styled-button" href="{{ page.extra.git_repo }}" target="_blank">
