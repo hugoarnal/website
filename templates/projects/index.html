@@ -6,12 +6,23 @@
         {{ section.title }}
     </h1>
 
-    <ul>
+    <h5>
+        {{ section.content | safe }}
+    </h5>
+
+    <div class="projects">
         {% for page in section.pages %}
-            <li>
-                <a href="{{ page.permalink | safe }}">{{ page.title }}</a> ({{ page.date }})
-            </li>
+            <div class="project">
+                <div class="project-buttons">
+                    {% for badge in page.extra.badges %}
+                        <button class="styled-button badge badge-{{badge}}" disabled="true">
+                            {{ badge }}
+                        </button>
+                    {% endfor %}
+                </div>
+                <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+            </div>
         {% endfor %}
-    </ul>
+    </div>
 </main>
 {% endblock content %}

@@ -168,3 +168,12 @@ button.styled-button {
 
     background-color: black;
 }
+
+button.badge {
+    font-size: 10px;
+    cursor: default;
+}
+
+button.badge-epitech {
+    background-color: var(--color-atom-blue);
+}
