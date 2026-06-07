@@ -90,6 +90,7 @@ main.content {
     padding: .5rem;
     margin: .5rem;
     gap: .5rem;
+    text-align: center;
 }
 
 .project-container {
