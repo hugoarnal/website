@@ -6,21 +6,44 @@
         {{ section.title }}
     </h1>
 
-    <h5>
+    <p>
         {{ section.content | safe }}
-    </h5>
+    </p>
 
     <div class="projects">
         {% for page in section.pages %}
             <div class="project">
-                <div class="project-buttons">
-                    {% for badge in page.extra.badges %}
-                        <button class="styled-button badge badge-{{badge}}" disabled="true">
-                            {{ badge }}
-                        </button>
-                    {% endfor %}
+                <div class="project-container">
+                    <h5>{{ page.title }}</h5>
+                    <div class="project-buttons">
+                        {% for badge in page.extra.badges %}
+                            <button class="styled-button badge badge-{{badge}}" disabled="true">
+                                {{ badge }}
+                            </button>
+                        {% endfor %}
+                    </div>
                 </div>
-                <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+                {% if page.extra.preview_description %}
+                    <p class="project-description">
+                        {{ page.extra.preview_description }}
+                    </p>
+                {% endif %}
+                <div class="project-container">
+                    {% if page.extra.git_repo %}
+                        <a class="styled-button" href="{{ page.extra.git_repo }}" target="_blank">
+                            <button class="styled-button">
+                                Git Repo
+                            </button>
+                        </a>
+                    {% endif %}
+                    {% if page.extra.see_more %}
+                        <a class="styled-button" href="{{ page.permalink | safe }}">
+                            <button class="styled-button">
+                                See more
+                            </button>
+                        </a>
+                    {% endif %}
+                </div>
             </div>
         {% endfor %}
     </div>

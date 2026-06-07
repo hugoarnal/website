@@ -4,8 +4,8 @@ title = "Raytracer"
 [extra]
 preview_description = "More"
 preview_image = ""
-preview_link = ""
-view_more = false
+git_repo = "https://github.com/hugoschool/raytracer"
+see_more = false
 tags = [
     "epitech"
 ]
