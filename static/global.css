@@ -231,3 +231,12 @@ button.badge-epitech {
 button.badge-wip {
     background-color: var(--color-atom-orange);
 }
+
+button.badge-contributed-to {
+    background-color: var(--color-atom-green);
+}
+
+button.badge-old {
+    background-color: var(--color-atom-light-gray);
+    color: black;
+}

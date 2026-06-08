@@ -16,5 +16,3 @@ tags = [
 ]
 badges = ["epitech"]
 +++
-
-Example

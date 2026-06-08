@@ -5,4 +5,6 @@ template = "projects/index.html"
 page_template = "projects/project.html"
 +++
 
+Some projects I've done over the course of the last 10 years.
+
 A fraction of my Epitech projects are seen here, see the entire collection over [on @hugoschool on GitHub](https://github.com/hugoschool)
