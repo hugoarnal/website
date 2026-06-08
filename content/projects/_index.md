@@ -1,5 +1,6 @@
 +++
 title = "Projects"
+sort_by = "weight"
 template = "projects/index.html"
 page_template = "projects/project.html"
 +++

@@ -11,7 +11,7 @@
     </p>
 
     <div class="projects">
-        {% for page in section.pages %}
+        {% for page in section.pages | reverse %}
             <div class="project">
                 <div class="project-container">
                     <h5>{{ page.title }}</h5>
