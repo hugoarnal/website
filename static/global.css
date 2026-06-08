@@ -1,4 +1,8 @@
-/* TODO: important, import JetBrains Mono */
+/* This seems to not be working for italic fonts */
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("./JetBrainsMono.ttf");
+}
 
 :root {
     --color-atom-gray: #282c34;
