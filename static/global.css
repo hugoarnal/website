@@ -8,10 +8,10 @@
     --color-atom-gray: #282c34;
     --color-atom-light-gray: #abb2bf;
     --color-atom-blue: #4082dd;
-    --color-atom-red: #be5046;
+    --color-atom-red: #ec4d46;
     --color-atom-green: #739e61;
     --color-atom-orange: #ff6347;
-    --color-atom-yellow: #c6a753;
+    --color-atom-yellow: #c89220;
 
     --animation-duration: .3s;
 
@@ -243,4 +243,23 @@ button.badge-contributed-to {
 button.badge-old {
     background-color: var(--color-atom-light-gray);
     color: black;
+}
+
+blockquote {
+    border-left: 5px solid #676E79;
+    border-radius: 0.15rem;
+    margin: 0;
+    padding-left: 1rem;
+}
+
+blockquote.markdown-alert-note {
+    border-left-color: var(--color-atom-blue);
+}
+
+blockquote.markdown-alert-warning {
+    border-left-color: var(--color-atom-yellow);
+}
+
+blockquote.markdown-alert-caution {
+    border-left-color: var(--color-atom-red);
 }
