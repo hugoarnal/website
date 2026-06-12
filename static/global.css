@@ -233,7 +233,7 @@ button.badge-epitech {
 }
 
 button.badge-wip {
-    background-color: var(--color-atom-orange);
+    background-color: var(--color-atom-yellow);
 }
 
 button.badge-contributed-to {
