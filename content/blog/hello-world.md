@@ -1,6 +1,12 @@
 +++
 title = "Hello world!"
 date = 2026-05-31
+
+[extra]
+tags = [
+    "hello",
+    "world"
+]
 +++
 
 Nothing much for now. Finishing this website first but very excited to write my first blog post!
