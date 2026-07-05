@@ -269,3 +269,7 @@ blockquote.markdown-alert-warning {
 blockquote.markdown-alert-caution {
     border-left-color: var(--color-atom-red);
 }
+
+pre.giallo {
+    overflow: auto;
+}
