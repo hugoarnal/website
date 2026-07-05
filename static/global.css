@@ -16,6 +16,13 @@
     --animation-duration: .3s;
 
     --header-height: 3rem;
+    --main-padding: 5rem;
+}
+
+@media only screen and (max-width: 768px) {
+    :root {
+        --main-padding: 2rem;
+    }
 }
 
 /* Force JetBrains Mono */
@@ -66,15 +73,8 @@ main.index .index-boxes {
 }
 
 main.content {
-    padding-left: 5rem;
-    padding-right: 5rem;
-}
-
-@media only screen and (max-width: 768px) {
-    main.content {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
+    padding-left: var(--main-padding);
+    padding-right: var(--main-padding);
 }
 
 .projects {
@@ -196,6 +196,12 @@ button.styled-button {
     cursor: pointer;
     font-size: 15px;
     font-weight: 400;
+}
+
+button.copy-button {
+    position: absolute;
+    right: var(--main-padding);
+    display: block;
 }
 
 .hover-bg-white:hover {
