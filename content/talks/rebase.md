@@ -7,6 +7,8 @@ Learn how to master `git rebase`
 
 ---
 
+![GD logo with Git](/slides/Epitech/rebase/assets/gd-git.webp)
+
 Workshop given about `git rebase`, its utility and how to use them.
 
 ## Planning

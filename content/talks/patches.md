@@ -7,6 +7,10 @@ Using git the "good old way"!
 
 ---
 
+![Mercurochrome logo with Git](/slides/Epitech/patches/assets/git-mercurochrome.webp)
+
+---
+
 Files:
 - [Slides](/slides/Epitech/patches/slides.pdf)
 - [ctc patch](/slides/Epitech/patches/0001-ref-separate-Fruit-Pad-from-script.js.patch)
