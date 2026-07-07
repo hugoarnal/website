@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{ page.title }}
+{% endblock title %}
+
+{% block og_meta %}
+<meta property="og:title" content="{{ page.title }}" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="{{ config.base_url }}" />
+{% if page.extra.image %}
+    <meta property="og:image" content="{{ page.extra.image }}" />
+{% endif %}
+<meta property="article:published_time" content="{{ page.date }}" />
+{% endblock og_meta %}
+
+{% block content %}
+<main class="content">
+    <h1 class="title">
+        {{ page.title }}
+    </h1>
+    <p class="subtitle">
+        <strong>{{ page.date }}</strong>
+    </p>
+    {{ page.content | safe }}
+</main>
+{% endblock content %}
