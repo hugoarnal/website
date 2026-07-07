@@ -1,0 +1,187 @@
+From b0609e3107fdd7699849aa58915cc5e4a73b1592 Mon Sep 17 00:00:00 2001
+From: Hugo ARNAL <hugo@hugoarnal.com>
+Date: Sat, 9 May 2026 18:56:20 +0200
+Subject: [PATCH] ref: separate Fruit & Pad from script.js
+
+---
+ client/Fruit.js   | 32 ++++++++++++++++++++++
+ client/Pad.js     | 26 ++++++++++++++++++
+ client/index.html |  4 ++-
+ client/script.js  | 70 ++++++-----------------------------------------
+ 4 files changed, 70 insertions(+), 62 deletions(-)
+ create mode 100644 client/Fruit.js
+ create mode 100644 client/Pad.js
+
+diff --git a/client/Fruit.js b/client/Fruit.js
+new file mode 100644
+index 0000000..5b3a5d3
+--- /dev/null
++++ b/client/Fruit.js
+@@ -0,0 +1,32 @@
++import { WIDTH, COLORS, TEXT_COLOR, ctx } from "./script.js";
++
++const FRUIT_RADIUS = 10;
++
++export class Fruit {
++    constructor(i = 0, letter) {
++        this.radius = FRUIT_RADIUS;
++        this.i = i;
++        this.x = Math.floor(Math.random() * WIDTH - 10) + 10;
++        this.y = (i * -20) - this.radius;
++        this.color = COLORS[Math.floor(Math.random() * COLORS.length)];
++        this.letter = letter;
++        this.speed = Math.random() + 0.25;
++    }
++
++    draw() {
++        ctx.beginPath();
++        ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
++        ctx.fillStyle = this.color;
++        ctx.fill();
++        ctx.stroke();
++        ctx.fillStyle = TEXT_COLOR[this.color];
++        ctx.font = `15px serif`;
++        ctx.textAlign = "center";
++        ctx.fillText(`${this.letter}`, this.x, this.y + 5);
++        ctx.fillStyle = "black";
++    }
++
++    update() {
++        this.y += this.speed;
++    }
++}
+diff --git a/client/Pad.js b/client/Pad.js
+new file mode 100644
+index 0000000..0f42d23
+--- /dev/null
++++ b/client/Pad.js
+@@ -0,0 +1,26 @@
++import { canvas, ctx, WIDTH, HEIGHT } from "./script.js";
++
++export class Pad {
++    constructor() {
++        this.width = 50;
++        this.height = 10;
++        this.x = WIDTH / 2 - (this.width / 2);
++        this.y = HEIGHT - 50;
++        this.color = "black";
++        this.speed = 10;
++
++        canvas.addEventListener("keydown", (e) => {
++            if (e.code == "ArrowLeft" && this.x - this.speed + this.width >= 0) {
++                this.x -= this.speed;
++            }
++            if (e.code == "ArrowRight" && this.x + this.speed <= WIDTH) {
++                this.x += this.speed;
++            }
++        });
++    }
++
++    draw() {
++        ctx.beginPath();
++        ctx.fillRect(this.x, this.y, this.width, this.height);
++    }
++}
+diff --git a/client/index.html b/client/index.html
+index c6342a1..b499606 100644
+--- a/client/index.html
++++ b/client/index.html
+@@ -35,3 +35,5 @@
+     </style>
+-    <script src="script.js" defer></script>
++    <script src="Fruit.js" type="module" defer></script>
++    <script src="Pad.js" type="module" defer></script>
++    <script src="script.js" type="module" defer></script>
+ </head>
+diff --git a/client/script.js b/client/script.js
+index 955fd43..424d7b7 100644
+--- a/client/script.js
++++ b/client/script.js
+@@ -1,8 +1,11 @@
++import { Fruit } from "./Fruit.js";
++import { Pad } from "./Pad.js";
++
+ const API_URL = "http://localhost:8080"
+ 
+-const canvas = document.getElementById("ctc-captcha");
++export const canvas = document.getElementById("ctc-captcha");
+ const submit = document.getElementById("submit");
+ 
+-const WIDTH = canvas.width;
+-const HEIGHT = canvas.height;
++export const WIDTH = canvas.width;
++export const HEIGHT = canvas.height;
+ const FONT_SIZE = 20;
+@@ -10,3 +13,3 @@ const CAPTCHA_SIZE = 7;
+ 
+-const COLORS = [
++export const COLORS = [
+     "red",
+@@ -18,3 +21,3 @@ const COLORS = [
+ 
+-const TEXT_COLOR = {
++export const TEXT_COLOR = {
+     "red": "white",
+@@ -32,58 +35,3 @@ var pad;
+ 
+-const ctx = canvas.getContext("2d");
+-
+-const FRUIT_RADIUS = 10;
+-class Fruit {
+-    constructor(i = 0, letter) {
+-        this.radius = FRUIT_RADIUS;
+-        this.i = i;
+-        this.x = Math.floor(Math.random() * WIDTH - 10) + 10;
+-        this.y = (i * -20) - this.radius;
+-        this.color = COLORS[Math.floor(Math.random() * COLORS.length)];
+-        this.letter = letter;
+-        this.speed = Math.random() + 0.25;
+-    }
+-
+-    draw() {
+-        ctx.beginPath();
+-        ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+-        ctx.fillStyle = this.color;
+-        ctx.fill();
+-        ctx.stroke();
+-        ctx.fillStyle = TEXT_COLOR[this.color];
+-        ctx.font = `15px serif`;
+-        ctx.textAlign = "center";
+-        ctx.fillText(`${this.letter}`, this.x, this.y + 5);
+-        ctx.fillStyle = "black";
+-    }
+-
+-    update() {
+-        this.y += this.speed;
+-    }
+-}
+-
+-class Pad {
+-    constructor() {
+-        this.width = 50;
+-        this.height = 10;
+-        this.x = WIDTH / 2 - (this.width / 2);
+-        this.y = HEIGHT - 50;
+-        this.color = "black";
+-        this.speed = 10;
+-
+-        canvas.addEventListener("keydown", (e) => {
+-            if (e.code == "ArrowLeft" && this.x - this.speed + this.width >= 0) {
+-                this.x -= this.speed;
+-            }
+-            if (e.code == "ArrowRight" && this.x + this.speed <= WIDTH) {
+-                this.x += this.speed;
+-            }
+-        });
+-    }
+-
+-    draw() {
+-        ctx.beginPath();
+-        ctx.fillRect(this.x, this.y, this.width, this.height);
+-    }
+-}
++export const ctx = canvas.getContext("2d");
+ 
+-- 
+2.54.0
+
