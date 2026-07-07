@@ -75,6 +75,7 @@ main.index .index-boxes {
 main.content {
     padding-left: var(--main-padding);
     padding-right: var(--main-padding);
+    padding-bottom: calc(var(--main-padding) / 2);
 }
 
 .projects {
