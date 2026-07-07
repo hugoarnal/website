@@ -78,6 +78,10 @@ main.content {
     padding-bottom: calc(var(--main-padding) / 2);
 }
 
+main.content img {
+    max-width: 100%;
+}
+
 .projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
