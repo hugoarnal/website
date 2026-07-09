@@ -17,6 +17,12 @@ codeBlocks.forEach((codeBlock) => {
 
     copyButton.onclick = () => {
         copyCodeContent(codeBlock);
+        copyButton.textContent = "Copied!";
+        copyButton.style = "background-color: var(--color-atom-blue); color: white;";
+        setTimeout(() => {
+            copyButton.textContent = "Copy";
+            copyButton.style = "";
+        }, 2500);
     }
     codeBlock.parentElement.prepend(copyButton);
 });
