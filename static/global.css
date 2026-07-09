@@ -201,6 +201,8 @@ button.styled-button {
     cursor: pointer;
     font-size: 15px;
     font-weight: 400;
+
+    transition-duration: var(--animation-duration);
 }
 
 button.copy-button {
@@ -210,27 +212,19 @@ button.copy-button {
 }
 
 .hover-bg-white:hover {
-    transition-duration: var(--animation-duration);
-
     background-color: white;
     color: black;
 }
 
 .hover-bg-green:hover {
-    transition-duration: var(--animation-duration);
-
     background-color: var(--color-atom-green);
 }
 
 .hover-bg-blue:hover {
-    transition-duration: var(--animation-duration);
-
     background-color: var(--color-atom-blue);
 }
 
 .hover-bg-black:hover {
-    transition-duration: var(--animation-duration);
-
     background-color: black;
 }
 
