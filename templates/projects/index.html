@@ -33,7 +33,9 @@
                 {% endif %}
 
                 {% if page.extra.preview_image %}
-                    <img class="project-image" src="{{ page.extra.preview_image }}"/>
+                    <a class="project-image" href="{{ page.extra.preview_image }}">
+                        <img class="project-image" src="{{ page.extra.preview_image }}"/>
+                    </a>
                 {% endif %}
 
                 <div class="project-container">
