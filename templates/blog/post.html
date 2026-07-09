@@ -25,6 +25,10 @@
     <p class="subtitle">
         <strong>{{ page.date }}</strong>
     </p>
+    {% if page.extra.image %}
+        <img class="blog-image" src="{{ page.extra.image }}" />
+        <hr>
+    {% endif %}
     {{ page.content | safe }}
 </main>
 <script src="/js/copy.js"></script>

@@ -14,6 +14,7 @@
     --color-atom-yellow: #c89220;
 
     --animation-duration: .3s;
+    --common-border-radius: .5rem;
 
     --header-height: 3rem;
     --main-padding: 5rem;
@@ -82,6 +83,12 @@ main.content img {
     max-width: 100%;
 }
 
+main.content .blog-image {
+    max-height: 250px;
+
+    border-radius: var(--common-border-radius);
+}
+
 .projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -101,7 +108,7 @@ main.content img {
     align-items: center;
 
     border: 1px solid var(--color-atom-light-gray);
-    border-radius: .5rem;
+    border-radius: var(--common-border-radius);
     padding: .5rem;
     margin: .5rem;
     gap: .5rem;
@@ -125,7 +132,7 @@ main.content img {
     width: 100%;
     height: 7.5rem;
     object-fit: cover;
-    border-radius: .5rem;
+    border-radius: var(--common-border-radius);
 }
 
 .project-container .styled-button {
@@ -162,7 +169,7 @@ img.avatar {
 
 header img.avatar {
     height: var(--header-height);
-    border-radius: .5rem;
+    border-radius: var(--common-border-radius);
 }
 
 main.index img.avatar {
