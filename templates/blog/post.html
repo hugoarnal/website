@@ -27,6 +27,9 @@
         <p class="subtitle">
             <strong>{{ page.date }}</strong>
         </p>
+
+        {{ <notice /> }}
+
         {% if page.extra.image %}
             <img class="blog-image" src="{{ page.extra.image }}" />
             <hr>

@@ -1,0 +1,21 @@
+{% component notice() %}
+    <!-- display: none is there in case someone visits without JS -->
+    <div class="global-notice" id="global-notice" style="display: none;">
+        <blockquote class="markdown-alert-note">
+            <p>
+                Currently looking for a 5 month full-time internship.
+                <br>
+                If you wish to learn more, please <a href="/blog/internship-2027">click here</a>.
+            </p>
+            <a class="styled-button" href="/blog/internship-2027">
+                <button class="styled-button hover-bg-white">
+                    Learn more
+                </button>
+            </a>
+            <button class="styled-button hover-bg-white" id="close-notice">
+                Close
+            </button>
+        </blockquote>
+    </div>
+    <script src="/js/notice.js"></script>
+{% endcomponent notice %}
