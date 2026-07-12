@@ -326,3 +326,15 @@ pre.giallo {
 pre.giallo * {
     font-style: normal !important;
 }
+
+.internship-2027-my_ftp-images {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 768px) {
+    .internship-2027-my_ftp-images {
+        flex-direction: column;
+    }
+}
