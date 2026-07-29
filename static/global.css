@@ -13,6 +13,10 @@
     --color-atom-orange: #ff6347;
     --color-atom-yellow: #c89220;
 
+    --color-catppuccin-base: #eff1f5;
+    --color-catppuccin-mantle: #e6e9ef;
+    --color-catppuccin-crust: #dce0e8;
+
     --animation-duration: .3s;
     --common-border-radius: .5rem;
 
@@ -43,6 +47,13 @@ html, body {
 
     color: white;
     background-color: var(--color-atom-gray);
+}
+
+@media (prefers-color-scheme: light) {
+    html, body {
+        color: black;
+        background-color: var(--color-catppuccin-base);
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -212,6 +223,13 @@ button.styled-button {
     transition-duration: var(--animation-duration);
 }
 
+@media (prefers-color-scheme: light) {
+    button.styled-button {
+        color: black;
+        border-color: black;
+    }
+}
+
 button.copy-button {
     position: absolute;
     right: var(--main-padding);
@@ -223,16 +241,25 @@ button.copy-button {
     color: black;
 }
 
+@media (prefers-color-scheme: light) {
+    .hover-bg-white:hover {
+        background-color: var(--color-catppuccin-crust);
+    }
+}
+
 .hover-bg-green:hover {
     background-color: var(--color-atom-green);
+    color: white;
 }
 
 .hover-bg-blue:hover {
     background-color: var(--color-atom-blue);
+    color: white;
 }
 
 .hover-bg-black:hover {
     background-color: black;
+    color: white;
 }
 
 button.badge {
@@ -242,14 +269,17 @@ button.badge {
 
 button.badge-epitech {
     background-color: var(--color-atom-blue);
+    color: white;
 }
 
 button.badge-wip {
     background-color: var(--color-atom-yellow);
+    color: white;
 }
 
 button.badge-contributed-to {
     background-color: var(--color-atom-green);
+    color: white;
 }
 
 button.badge-old {
