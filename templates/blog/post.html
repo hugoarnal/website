@@ -19,17 +19,20 @@
 
 {% block content %}
 <main class="content">
-    <h1 class="title">
-        {{ page.title }}
-    </h1>
-    <p class="subtitle">
-        <strong>{{ page.date }}</strong>
-    </p>
-    {% if page.extra.image %}
-        <img class="blog-image" src="{{ page.extra.image }}" />
-        <hr>
-    {% endif %}
-    {{ page.content | safe }}
+    <!-- article tag is useful for reading mode -->
+    <article>
+        <h1 class="title">
+            {{ page.title }}
+        </h1>
+        <p class="subtitle">
+            <strong>{{ page.date }}</strong>
+        </p>
+        {% if page.extra.image %}
+            <img class="blog-image" src="{{ page.extra.image }}" />
+            <hr>
+        {% endif %}
+        {{ page.content | safe }}
+    </article>
 </main>
 <script src="/js/copy.js"></script>
 {% endblock content %}
