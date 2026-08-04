@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main class="content">
+    <h1 class="title">
+        {{ section.title }}
+    </h1>
+
+    {{ section.content | safe }}
+
+    {{ <notice_button link="/resume/CV-Hugo-ARNAL-en.pdf" language="English" /> }}
+    {{ <notice_button link="/resume/CV-Hugo-ARNAL-fr.pdf" language="French" /> }}
+</main>
+{% endblock content %}
