@@ -22,6 +22,7 @@
 
     --header-height: 3rem;
     --main-padding: 5rem;
+    --codeblock-padding: 1em;
 }
 
 @media only screen and (max-width: 768px) {
@@ -232,7 +233,7 @@ button.styled-button {
 
 button.copy-button {
     position: absolute;
-    right: var(--main-padding);
+    right: calc(var(--main-padding) + var(--codeblock-padding));
     display: block;
 }
 
@@ -308,4 +309,7 @@ blockquote.markdown-alert-caution {
 
 pre.giallo {
     overflow: auto;
+    border: 1px solid var(--color-atom-light-gray);
+    border-radius: 0.25rem;
+    padding: var(--codeblock-padding);
 }
