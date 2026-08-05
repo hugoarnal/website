@@ -320,3 +320,9 @@ pre.giallo {
     border-radius: 0.25rem;
     padding: var(--codeblock-padding);
 }
+
+/* Bypass of the forced italic in some code blocks */
+/* I haven't found a better work around */
+pre.giallo * {
+    font-style: normal !important;
+}
