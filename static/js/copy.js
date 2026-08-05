@@ -24,5 +24,7 @@ codeBlocks.forEach((codeBlock) => {
             copyButton.style = "";
         }, 2500);
     }
-    codeBlock.parentElement.prepend(copyButton);
+    if (codeBlock.parentElement.classList.contains("giallo")) {
+        codeBlock.parentElement.prepend(copyButton);
+    }
 });
