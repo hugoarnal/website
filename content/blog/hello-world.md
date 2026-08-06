@@ -1,6 +1,7 @@
 +++
 title = "Hello world!"
 date = 2026-05-31
+updated = 2026-08-06
 
 [extra]
 tags = [
@@ -14,7 +15,7 @@ Nothing much for now. Finishing this website first but very excited to write my 
 > [!WARNING]
 > This page might change much to test the blog portion of the site.
 
-Here's a code snippet as useful as this blog post:
+Here's a `code snippet` as useful as this blog post:
 
 ```c
 #include <stdio.h>
@@ -25,6 +26,10 @@ int main(void)
     printf("Another hello world line but this one is like really long just to test out some overflowing capacities. There's truely nothing there...................................................\n");
     return 1;
 }
+```
+
+```bash
+echo "Follow up small code snippet"
 ```
 
 > Completely normal note

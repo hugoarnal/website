@@ -26,6 +26,9 @@
         </h1>
         <p class="subtitle">
             <strong>{{ page.date }}</strong>
+            {% if page.updated %}
+                (updated: {{ page.updated }})
+            {% endif %}
         </p>
         {% if page.extra.image %}
             <img class="blog-image" src="{{ page.extra.image }}" />
