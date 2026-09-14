@@ -1,6 +1,7 @@
 +++
 title = "Rebase after base"
 date = 2026-05-07
+authors = ["Hugo ARNAL"]
 +++
 
 Learn how to master `git rebase`

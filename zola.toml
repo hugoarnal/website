@@ -1,11 +1,11 @@
 # The URL the site will be built for
 base_url = "https://hugoarnal.com"
 
-# Whether to automatically compile all Sass files in the sass directory
 compile_sass = false
-
-# Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
+
+# https://www.getzola.org/documentation/templates/feeds/
+generate_feeds = true
 
 [markdown]
 github_alerts = true
@@ -13,6 +13,3 @@ github_alerts = true
 [markdown.highlighting]
 dark_theme = "one-dark-pro"
 light_theme = "catppuccin-latte"
-
-[extra]
-# Put all your custom variables here

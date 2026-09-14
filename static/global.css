@@ -86,17 +86,17 @@ main.index .index-boxes {
     gap: .50rem;
 }
 
-main.content {
+.content {
     padding-left: var(--main-padding);
     padding-right: var(--main-padding);
     padding-bottom: calc(var(--main-padding) / 2);
 }
 
-main.content img {
+.content img {
     max-width: 100%;
 }
 
-main.content .blog-image {
+.content .blog-image {
     max-height: 250px;
 
     border-radius: var(--common-border-radius);

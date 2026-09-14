@@ -2,9 +2,12 @@
 
 {% block content %}
 <main class="content">
-    <h1 class="title">
-        {{ section.title }}
-    </h1>
+    <div style="display: flex; align-items: center; gap: 1em">
+        <h1 class="title">
+            {{ section.title }}
+        </h1>
+        {{ <rss_button /> }}
+    </div>
 
     {{ section.content | safe }}
 

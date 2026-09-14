@@ -1,6 +1,7 @@
 +++
 title = "0001-workshop.patch"
 date = 2026-05-12
+authors = ["Hugo ARNAL"]
 +++
 
 Using git the "good old way"!

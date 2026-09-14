@@ -2,6 +2,7 @@
 title = "Hello world!"
 date = 2026-05-31
 updated = 2026-08-06
+authors = ["Hugo ARNAL"]
 
 [extra]
 tags = [
