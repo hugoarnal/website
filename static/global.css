@@ -96,7 +96,14 @@ main.index .index-boxes {
     max-width: 100%;
 }
 
-.content .blog-image {
+.content div.blog-image {
+    min-width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.content img.blog-image {
     max-height: 250px;
 
     border-radius: var(--common-border-radius);

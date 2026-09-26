@@ -36,7 +36,9 @@
         {{ <notice /> }}
 
         {% if page.extra.image %}
-            <img class="blog-image" src="{{ page.extra.image }}" />
+            <div class="blog-image">
+                <img class="blog-image" src="{{ page.extra.image }}" />
+            </div>
             <hr>
         {% endif %}
         {{ page.content | safe }}
