@@ -32,6 +32,9 @@
                 (updated: {{ page.updated }})
             {% endif %}
         </p>
+
+        {{ <notice /> }}
+
         {% if page.extra.image %}
             <img class="blog-image" src="{{ page.extra.image }}" />
             <hr>
