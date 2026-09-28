@@ -7,6 +7,7 @@ tags = [
     "announcement",
     "internship",
 ]
+hidden_image_tag = "/blog/internship-2027/open-to-work.png"
 +++
 
 I'm currently looking for a **full-time** internship starting **<u>March 29th 2027</u>** and spanning at least 4 months (ending on **July 31st 2027**).
