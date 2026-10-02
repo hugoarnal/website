@@ -1,0 +1,30 @@
+name: Upload to preview
+
+on:
+  push:
+    branches:
+      - preview
+  workflow_dispatch:
+
+jobs:
+  upload-website:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Build Zola + upload Pages artifact
+        uses: getzola/github-pages@435a833fd3f1edcb28d70576c89e30a6365cd8f7 # v1
+        with:
+          zola_version: v0.23.6
+          build_flags: --base-url="${{ vars.SITE_URL }}"
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/git-pages@8f8f20eeda940df9f7f31c0f3721050999705d67
+        with:
+          site: ${{ vars.SITE_URL }}
+          server: codeberg.page
+          token: ${{ forgejo.token }}
+          source: public/
