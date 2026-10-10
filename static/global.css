@@ -358,3 +358,15 @@ pre.giallo * {
         flex-direction: column;
     }
 }
+
+/* See https://stackoverflow.com/a/53336754 */
+/* No idea why it is so complicated */
+.rss-logo {
+    filter: invert(100%) saturate(0%) brightness(100%) contrast(100%);
+}
+
+@media (prefers-color-scheme: light) {
+    .rss-logo {
+        filter: saturate(0%) brightness(0%) contrast(100%);
+    }
+}
