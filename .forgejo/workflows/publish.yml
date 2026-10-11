@@ -24,6 +24,9 @@ jobs:
 
           wget -O /tmp/zola.tar.gz $URL
           tar zxf /tmp/zola.tar.gz zola
+
+          sed -i "s/preview_mode = .*\$/preview_mode = true/g" zola.toml
+
           ./zola build --base-url="${{ vars.SITE_URL }}"
 
       - name: Deploy to GitHub Pages

@@ -370,3 +370,9 @@ pre.giallo * {
         filter: saturate(0%) brightness(0%) contrast(100%);
     }
 }
+
+.preview-mode {
+    background-color: var(--color-atom-yellow);
+    color: white;
+    height: min-content;
+}

@@ -19,6 +19,11 @@
 </head>
 
 <body>
+    {% if config.extra.preview_mode %}
+    <header class="preview-mode">
+        Currently running in preview mode. Some content might be subject to change.
+    </header>
+    {% endif %}
     {% block header %}
     <header>
         <img class="avatar" src="/cat.png" alt="My avatar, a cat picture" />

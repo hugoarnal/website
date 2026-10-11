@@ -13,3 +13,7 @@ github_alerts = true
 [markdown.highlighting]
 dark_theme = "one-dark-pro"
 light_theme = "catppuccin-latte"
+
+[extra]
+# Sets the preview mode header on all pages
+preview_mode = false
